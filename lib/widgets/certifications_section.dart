@@ -1,4 +1,8 @@
+import 'package:bilal_portfolio/widgets/hover_card.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/hover_provider.dart';
 
 class CertificateItem {
   final String title;
@@ -24,32 +28,38 @@ class CertificationsSection extends StatelessWidget {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 10),
-        Card(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          elevation: 2,
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  certificate.title,
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        ChangeNotifierProvider(
+          create: (_) => HoverProvider(),
+          child: HoverCard(
+            shadowColor: Color(0xff00d9ca),
+            child: Card(
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              elevation: 2,
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      certificate.title,
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
+                    const SizedBox(height: 6),
+
+
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset(certificate.assetPath,
+                        width: MediaQuery.of(context).size.width * 0.40, // 75% of screen width
+                        fit: BoxFit.contain,
+                      ),
+
+                    ),
+                    const SizedBox(height: 8),
+
+                  ],
                 ),
-                const SizedBox(height: 6),
-
-
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(certificate.assetPath,
-                    width: MediaQuery.of(context).size.width * 0.45, // 75% of screen width
-                    fit: BoxFit.contain,
-                  ),
-
-                ),
-                const SizedBox(height: 8),
-
-              ],
+              ),
             ),
           ),
         ),
