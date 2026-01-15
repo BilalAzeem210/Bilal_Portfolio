@@ -1,4 +1,5 @@
 import 'package:bilal_portfolio/providers/hover_provider.dart';
+import 'package:bilal_portfolio/providers/keyboard_scroll_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/project_provider.dart';
@@ -12,6 +13,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         Provider(create: (_) => ProjectProvider()),
         ChangeNotifierProvider(create: (_) => HoverProvider()),
+        ChangeNotifierProvider(create: (_) => KeyboardScrollProvider()),
 
       ],
       child: const MyApp(),
