@@ -35,9 +35,9 @@ class HoverCard extends StatelessWidget {
                 color: isHovered
                     ? shadowColor.withAlpha(115)
                     : Colors.black.withAlpha(45),
-                blurRadius: isHovered ? 28 : 12,
-                spreadRadius: isHovered ? 2 : 0,
-                offset: const Offset(0, 10),
+                blurRadius: isHovered ? 16 : 8,
+                /*spreadRadius: isHovered ? 2 : 0,*/
+               /* offset: const Offset(0, 6),*/
               ),
             ],
           ),

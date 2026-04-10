@@ -27,7 +27,7 @@ class EducationSection extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => HoverProvider(),
           child: HoverCard(
-            shadowColor: Color(0xff00d9ca),
+            shadowColor: Color(0xff00d9ca).withOpacity(0.5),
             child: Card(
               elevation: 4,
               shape: RoundedRectangleBorder(

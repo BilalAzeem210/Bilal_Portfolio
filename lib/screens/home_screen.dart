@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         SizedBox(height: sectionSpacing),
                         Text(
-                          'Flutter Developer crafting cross-platform apps that fuse modern design, AI innovation, and robust architecture.',
+                          'Flutter Developer building scalable mobile and web apps with clean architecture, modern UI, and AI-powered solutions.',
                           style: TextStyle(fontSize: descFontSize),
                         ),
                         SizedBox(height: sectionSpacing * 1.2),

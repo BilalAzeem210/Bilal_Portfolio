@@ -50,7 +50,7 @@ class CertificationsSection extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Image.asset(certificate.assetPath,
-                        width: MediaQuery.of(context).size.width * 0.40, // 75% of screen width
+                        width: MediaQuery.of(context).size.width * 0.34, // 75% of screen width
                         fit: BoxFit.contain,
                       ),
 

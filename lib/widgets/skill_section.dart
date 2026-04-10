@@ -9,7 +9,7 @@ class SkillsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final skills = ['Flutter', 'Dart', 'Provider','Getx','REST APIs', 'Google Maps', 'Firebase', 'UI/UX','Figma'];
+    final skills = ['Flutter', 'Dart', 'Firebase','REST APIs','Provider','GetX','BLoC','Ai Integration','Google Maps','UI/UX','Figma'];
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Text('Skills', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
       const SizedBox(height: 8),
