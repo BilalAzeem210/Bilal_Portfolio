@@ -35,8 +35,8 @@ class _HomeScreenState extends State<HomeScreen> {
     if (ctx == null) return;
     await Scrollable.ensureVisible(
       ctx,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.easeInOut,
+      duration: const Duration(milliseconds: 900),
+      curve: Curves.easeInCubic,
       alignment: 0.0,
     );
   }
@@ -133,20 +133,44 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: TextStyle(fontSize: descFontSize),
                         ),
                         SizedBox(height: sectionSpacing * 1.2),
-      
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.yellow.shade700,
-                          ),
-                          onPressed: () => downloadCV(context),
-                          child: const Text(
-                            'Download CV',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
+                        Row(
+                          children: [
+                            ElevatedButton(
+
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.amber.shade700, // primary
+                                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
+                              onPressed: () {
+                                scrollToKey(contactKey);
+                              },
+                              child: Text("Hire Me",style: TextStyle(
+                                color: Colors.white
+                              ),),
+                            ),
+                            SizedBox(width: 16,),
+
+                            OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+                                side: BorderSide(color: Colors.amber),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
+                              onPressed: () => downloadCV(context),
+                              child: Text("Download CV",style: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,),),
+                            ),
+
+                          ],
                         ),
+
       
                         SizedBox(height: sectionSpacing * 1.2),
       
