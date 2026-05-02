@@ -41,28 +41,28 @@ class EducationSection extends StatelessWidget {
                   children: [
                     _buildEducationItem(
                       title: 'BSCS (Bachelor of Science in Computer Science)',
-                      institution: 'Virtual University of Pakistan',
+                      institution: 'Virtual University of Pakistan (2025 - Present)',
 
                     ),
                     const Divider(height: 24),
 
                     _buildEducationItem(
                       title: '3-Year Diploma in ACCP EE',
-                      institution: 'Aptech Learning North Nazimabad',
+                      institution: 'Aptech Learning North Nazimabad (2017 - 2020)',
 
                     ),
                     const Divider(height: 24),
 
                     _buildEducationItem(
                       title: 'Higher Education (Intermediate in Commerce)',
-                      institution: 'Government Islamia Arts & Commerce College Karachi',
+                      institution: 'Government Islamia Arts & Commerce College Karachi (2010 - 2012)',
 
                     ),
                     const Divider(height: 24),
 
                     _buildEducationItem(
                       title: 'Secondary Education (Matriculation in Science)',
-                      institution: 'Government Boys Secondary School, Karachi',
+                      institution: 'Government Boys Secondary School, Karachi (2008 - 2010)',
 
                     ),
                   ],
@@ -94,7 +94,7 @@ class EducationSection extends StatelessWidget {
           institution,
           style: TextStyle(
             fontSize: 15,
-            color: Colors.grey[700],
+            color: Colors.grey[500],
           ),
         ),
 
