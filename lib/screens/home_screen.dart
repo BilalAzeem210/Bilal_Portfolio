@@ -2,6 +2,7 @@ import 'package:bilal_portfolio/widgets/education_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../models/certificate_item.dart';
 import '../providers/keyboard_scroll_provider.dart';
 import '../providers/project_provider.dart';
 import '../utils/download_helper.dart';
@@ -208,9 +209,15 @@ class _HomeScreenState extends State<HomeScreen> {
                          Container(
                               key: certificationsKey,
                               child: CertificationsSection(
-                                certificate: CertificateItem(
+                                certificate:  CertificateItem(
                                   title: 'Flutter Development',
-                                  assetPath: 'assets/images/BilalCertificate.jpg',
+                                  assetPath:
+                                  'assets/images/BilalCertificate.jpg',
+                                  platform: 'Udemy',
+                                  instructor:
+                                  'Maximilian Schwarzmüller',
+                                  year: '2022',
+                                  duration: '42.5 Hours',
                                 ),
                               ),
                             ),

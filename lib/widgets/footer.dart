@@ -20,7 +20,7 @@ class Footer extends StatelessWidget {
   }
 
   Future<void> _openEmail() async {
-    final uri = Uri.tryParse('mailto:biazeem210@gmail.com');
+    final uri = Uri.tryParse('mailto:bilalazeem.dev@gmail.com');
     if (uri != null && await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
@@ -68,7 +68,7 @@ class Footer extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
-                      '📧  biazeem210@gmail.com',
+                      '📧  bilalazeem.dev@gmail.com',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold

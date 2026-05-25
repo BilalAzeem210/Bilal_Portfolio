@@ -54,14 +54,14 @@ class EducationSection extends StatelessWidget {
                     const Divider(height: 24),
 
                     _buildEducationItem(
-                      title: 'Higher Education (Intermediate in Commerce)',
+                      title: 'Intermediate in Commerce',
                       institution: 'Government Islamia Arts & Commerce College Karachi (2010 - 2012)',
 
                     ),
                     const Divider(height: 24),
 
                     _buildEducationItem(
-                      title: 'Secondary Education (Matriculation in Science)',
+                      title: 'Matriculation in Science',
                       institution: 'Government Boys Secondary School, Karachi (2008 - 2010)',
 
                     ),
