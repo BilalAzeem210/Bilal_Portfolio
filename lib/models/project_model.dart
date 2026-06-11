@@ -13,3 +13,4 @@ class Project {
     this.repoUrl = 'https://github.com/BilalAzeem210?tab=repositories',
   });
 }
+

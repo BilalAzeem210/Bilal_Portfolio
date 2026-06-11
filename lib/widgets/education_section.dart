@@ -33,7 +33,6 @@ class EducationSection extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              color: isDark ? Colors.grey[900] : Colors.white,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(

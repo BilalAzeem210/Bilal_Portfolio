@@ -35,7 +35,7 @@ class Footer extends StatelessWidget {
       child: HoverCard(
         shadowColor: Color(0xff00d9ca),
         child: Card(
-          color: theme.cardColor,
+
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -50,7 +50,7 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  'Have a project idea or want to collaborate?\nFeel free to reach out!',
+                  'Available for Flutter development, freelance projects,\nand AI-powered application development.',
                   textAlign: TextAlign.center,
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
@@ -79,13 +79,12 @@ class Footer extends StatelessWidget {
                 const SizedBox(height: 20),
                 Divider(color: theme.dividerColor.withOpacity(0.3)),
                 Center(
-                  child: Wrap(
-                    alignment: WrapAlignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
 
                     children: [
                       IconButton(
-                        icon: Image.asset('assets/images/github.png',height: 40,),
-                        iconSize: 30,
+                        icon: Image.asset('assets/images/github.png',height: 32.5,),
                         tooltip: 'GitHub',
                         onPressed: () => _openUrl(github),
                       ),
@@ -103,7 +102,7 @@ class Footer extends StatelessWidget {
 
                 Center(
                   child: Text(
-                    'Build by: Bilal Azeem',
+                    'Built by Bilal Azeem',
                     style: const TextStyle(fontSize: 15,
                         fontWeight: FontWeight.w500),
                   ),

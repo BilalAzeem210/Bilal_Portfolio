@@ -56,11 +56,11 @@ class ProjectsSection extends StatelessWidget {
                     children: [
                       // --- Consistent Screenshot ---
                       AspectRatio(
-                        aspectRatio: 16 / 10,
+                        aspectRatio: 16/ 10,
                         child: Image.asset(
                           p.imageAsset,
                           fit: BoxFit.cover,
-                          width: double.infinity,
+
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -90,9 +90,55 @@ class ProjectsSection extends StatelessWidget {
                         ),
                       ),
 
-                      SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                      //SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                      Spacer(),
                       // --- Play Store Button ---
-                      if (p.playStoreUrl.isNotEmpty)
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          if (p.repoUrl.isNotEmpty)
+                            TextButton.icon(
+                              icon: Image.asset(
+                                'assets/images/giticon.png',
+                                height: 22,
+                              ),
+                              label: Text(
+                                'View Code',
+                                style: TextStyle(
+                                  color: Theme.of(context).brightness == Brightness.dark
+                                      ? Colors.white70
+                                      : Colors.black87,
+                                  fontSize: 15,
+                                ),
+                              ),
+
+                              onPressed: () => _openUrl(p.repoUrl),
+                            ),
+
+                          if (p.playStoreUrl.isNotEmpty)
+                            TextButton.icon(
+                              icon: Image.asset(
+                                'assets/images/playstore2.png',
+                                height: 22,
+                              ),
+                              label: Text(
+                                'Play Store',
+                                style:
+                                TextStyle(
+                                  color: Theme.of(context).brightness == Brightness.dark
+                                      ? Colors.white70
+                                      : Colors.black87,
+                                  fontSize: 15,
+                                ),
+                              ),
+
+                              onPressed: () => _openUrl(p.playStoreUrl),
+                            ),
+                        ],
+                      )
+
+                      /*if (p.playStoreUrl.isNotEmpty)
                         IconButton
                           (onPressed: () => _openUrl(p.playStoreUrl),
                             icon: Center(
@@ -100,7 +146,7 @@ class ProjectsSection extends StatelessWidget {
                                 'assets/images/playstore2.png',
                                 height: MediaQuery.of(context).size.height * 0.05, // ✅ Adjust icon size as you like
                               ),
-                            ),)
+                            ),)*/
 
                     ],
                   ),
